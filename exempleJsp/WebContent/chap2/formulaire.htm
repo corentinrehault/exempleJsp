@@ -1,0 +1,42 @@
+<!-- 
+#	Initiation à JSP
+#	A. Tasso, S. Ermacore
+#	Exemples Chapitre 2 : Communiquer avec l'internaute 
+#	Section : Les différents outils HTML pour construire des formulaires
+-->
+<HTML>
+<HEAD>
+
+<!-- Debut du formulaire html-->
+
+<FORM ACTION="http://localhost:8080/exercicesJSP/chap2/expression.jsp"
+      METHOD "POST">
+  <input type=text name="text" value="Entrez votre nom ici "><br><br>
+  
+  Un bouton radio : <input type="Radio" name="radio" value="1">  <br>
+  Un bouton radio coché : <input type="Radio" name="radio" value="1" checked>  <br><br>
+  Une case à cocher :<input type=checkbox name="CasaCocher value="2"> <br><br>
+   <input type=hidden name="caché" value="3">  Un champ caché  <br><br>
+  Initialiser le formulaire : <input type=reset value="Initialiser"> <br><br>
+  Saisir un mot de passe : <input type=password name="motPasse" maxlength="8"> <br><br>
+  Saisir un nom de fichier : <input type=file name="fichier"><br><br>
+
+<select name="listechoix" size="3"> 
+<option>Lundi</option> 
+<option selected>Mardi  </option> 
+<option>Mercredi</option> 
+<option>Jeudi</option> 
+<option >Vendredi</option> 
+<option>Samedi</option> 
+<option>Dimanche</option> 
+</select> 
+
+
+<p>
+Valider le formulaire : <input type="submit" value="OK"> </p>
+
+<TEXTAREA name="zonetexte" rows="10" cols="30"> Entrez votre article : </TEXTAREA> 
+</form>
+
+</BODY>
+</HTML>

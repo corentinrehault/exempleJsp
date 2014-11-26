@@ -1,0 +1,32 @@
+<!-- 
+#	Initiation à JSP
+#	A. Tasso, S. Ermacore
+#	Exemples Chapitre 2 : Communiquer avec l'internaute 
+#	Section : Du HTML pur, pour une information statique - Les tableaux
+-->
+
+<html>  
+<head>
+</head>
+<title>Un tabeau 3 x 3 avec fusion et alignement </title>
+<body>  
+  <table border=1>
+    <!-Ligne n° 1 -->
+    <tr> 
+      <td align=right> Cellule n°1 </td>
+      <td colspan = 2> Cellules n°2 et n°3 fusionnées </td>
+    </tr>
+    <!-Ligne n° 2 -->
+    <tr>
+      <td> Cellule n° 4 </td>
+     <td> Cellule n° 5 </td>
+    <td rowspan=2> Cellules n° 6 et n° 9 fusionnées </td>
+    </tr>
+    <!-Ligne n° 3 -->
+    <tr valign=bottom>
+      <td> Cellule n° 7 </td>
+     <td> Cellule n° 8 </td>
+    </tr>
+  </table> 
+</body>
+</html> 

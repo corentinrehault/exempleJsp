@@ -1,0 +1,5 @@
+jspuser
+jspuser
+localhost
+3306
+livrejsp
