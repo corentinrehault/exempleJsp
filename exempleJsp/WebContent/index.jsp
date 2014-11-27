@@ -14,7 +14,7 @@
 <table width=700>
 <tr>
   <td><img src="logoEyrolles.gif"><br><br>
-<center><font face="arial" size=4>Initiation à JSP : Exemples JSP&nbsp;<small><a href="/exercicesJSP/index.jsp">(exercices)</a></small></center><br>
+<center><font face="arial" size=4>Initiation à JSP : Exemples JSP&nbsp;<small><a href="/exercicesJsp/index.jsp">(exercices)</a></small></center><br>
 <br>
 <font face="arial" size=2><i><b>Introduction</i></b><br>
 <table width=700 cellpadding=4 cellspacing=4 class=cadre><tr><td>

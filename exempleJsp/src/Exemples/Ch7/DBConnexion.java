@@ -1,18 +1,20 @@
 /*
-#	Initiation ‡ JSP
+#	Initiation √† JSP
 #	A. Tasso, S. Ermacore
-#	Exemples Chapitre 7 : Les servlets ou les dessous cachÈs de JSP
+#	Exemples Chapitre 7 : Les servlets ou les dessous cach√©s de JSP
 #	Section : Construire ses propres servlets 
-#                 - Une servlet pour authentifier un lecteur auprËs d'une base de donnÈes
+#                 - Une servlet pour authentifier un lecteur aupr√®s d'une base de donn√©es
 #	Fichier : DBConnexion.java
 #	Class : DBConnection
 */
+
+package Exemples.Ch7 ;
 
 import java.sql.*;
 
 public class DBConnexion {
 	
-	//DÈfinition des propriÈtÈs
+	//D√©finition des propri√©t√©s
 	private String login;
 	private String password ;
 	private String hostname;
@@ -20,7 +22,7 @@ public class DBConnexion {
 	private String nomDeLaBase;
 	private Connection cnx;
 	
-	// Methodes d'acces en Ècriture
+	// Methodes d'acces en √©criture
 	public void setLogin (String valeur) {
 		login = valeur ;
 	}
@@ -41,7 +43,7 @@ public class DBConnexion {
 		nomDeLaBase = valeur ;
 	}	
 	
-	// Methodes d'acces en lecture
+	// M√©thodes d'acc√®s en lecture
 	public Connection getCnx() {
 		if (etablirConnexion()) {
 			return cnx;	
@@ -50,7 +52,7 @@ public class DBConnexion {
 		}
 	}	
 	
-	// MÈthodes invisibles (mÈtier)
+	// M√©thodes invisibles (m√©tier)
 	private String construireUrlJdbc() {
 		String urlJdbc ;
 		urlJdbc = "jdbc:mysql://"+hostname+":" + port + "/" + nomDeLaBase ;

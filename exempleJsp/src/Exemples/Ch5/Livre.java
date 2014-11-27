@@ -1,8 +1,8 @@
 /*
-#	Initiation ‡ JSP
+#	Initiation √† JSP
 #	A. Tasso, S. Ermacore
-#	Exemples Chapitre 5 : Interroger une base de donnÈes
-#	Section : Enrichir une base de donnÈes avec JSP - Un composant JavaBean communique avec JSP
+#	Exemples Chapitre 5 : Interroger une base de donn√©es
+#	Section : Enrichir une base de donn√©es avec JSP - Un composant JavaBean communique avec JSP
 #	Fichier : Livre.java
 #	Class : Livre
 #	Package : Exemple.ch5
@@ -13,7 +13,7 @@ package Exemples.Ch5 ;
 import java.io.Serializable ;
 public class Livre implements java.io.Serializable {
 
-	//DÈfinition des propriÈtÈs
+	//D√©finition des propri√©t√©s
 	private String titre;
 	private String categorie ;
 	private String isbn ;
@@ -21,16 +21,16 @@ public class Livre implements java.io.Serializable {
 	private String prenomAuteur ;
 	private String code ;
 
-	// DÈfinition des methodes díaccËs en Ècriture
+	// D√©finition des m√©thodes d'acc√®s en √©criture
 	// Enregistre le Titre
 	public void setTitre (String valeur) {
 		titre = valeur ;
 	}
-	// Enregistre la catÈgorie
+	// Enregistre la cat√©gorie
 	public void setCategorie (String valeur) {
 		categorie = valeur;
 	}
-	// Enregistre le numÈro ISBN
+	// Enregistre le num√©ro ISBN
 	public void setIsbn (String valeur) {
 		isbn =valeur;
 	}
@@ -38,21 +38,21 @@ public class Livre implements java.io.Serializable {
 	public void setNomAuteur (String valeur) {
 		nomAuteur =valeur;
 	}
-	// Enregistre le prÈnom de l'auteur 
+	// Enregistre le pr√©nom de l'auteur 
 	public void setPrenomAuteur (String valeur) {
 		prenomAuteur =valeur;
 	}
 	
-	// DÈfinition des methodes díaccËs en lecture
+	// D√©finition des m√©thodes d'acc√®s en lecture
 	// Consulte le titre
 	public String getTitre () {
 		return titre;
 	}
-	// Consulte la catÈgorie
+	// Consulte la cat√©gorie
 	public String getCategorie () {
 		return categorie;
 	}
-	// Consulte le numÈro ISBN
+	// Consulte le num√©ro ISBN
 	public String getIsbn () {
 		return isbn;
 	}
@@ -60,7 +60,7 @@ public class Livre implements java.io.Serializable {
 	public String getNomAuteur () {
 		return nomAuteur;
 	}
-	// Consulte le prÈnom de l'auteur 
+	// Consulte le pr√©nom de l'auteur 
 	public String getPrenomAuteur () {
 		return prenomAuteur;
 	}
@@ -70,7 +70,7 @@ public class Livre implements java.io.Serializable {
 		return code;
 	}
 
-	// MÈthode mÈtier : Calculer le code d'enregistrement
+	// M√©thode m√©tier : Calculer le code d'enregistrement
 	private String calculCode () {
 		String debutNom;
 		String debutPrenom;

@@ -1,7 +1,7 @@
 /*
-#	Initiation ‡ JSP
+#	Initiation √† JSP
 #	A. Tasso, S. Ermacore
-#	Exemples Chapitre 6 : ConnaÓtre l'internaute
+#	Exemples Chapitre 6 : Conna√Ætre l'internaute
 #	Section : Traiter des objets Java au cours d'une session
 #	Fichier : Lecteur.java
 #	Class : Lecteur
@@ -15,7 +15,7 @@ import java.util.Calendar ;
 import java.text.DateFormat ;
 public class Lecteur implements java.io.Serializable {
 
-	//DÈfinition des propriÈtÈs
+	//D√©finition des propri√©t√©s
 	private String nomLecteur ;
 	private String prenomLecteur ;
 	private String numero ;
@@ -25,16 +25,16 @@ public class Lecteur implements java.io.Serializable {
  	private String ville ;	  
 	private String dateAnniversaire ;
 
-	// DÈfinition des methodes díaccËs en Ècriture
+	// D√©finition des m√©thodes d'acc√®s en √©criture
 	// Enregistre le nom du lecteur
 	public void setNomLecteur (String valeur) {
 		nomLecteur =valeur;
 	}
-	// Enregistre le prÈnom de l'auteur 
+	// Enregistre le pr√©nom de l'auteur 
 	public void setPrenomLecteur (String valeur) {
 		prenomLecteur =valeur;
 	}
-	// Enregistre le numero de l'auteur 
+	// Enregistre le num√©ro de l'auteur 
 	public void setNumero (String valeur) {
 		numero = valeur;
 	}
@@ -55,16 +55,16 @@ public class Lecteur implements java.io.Serializable {
            motDePasse = valeur;
 	}	
 		
-	// DÈfinition des methodes díaccËs en lecture
+	// D√©finition des m√©thodes d'acc√®s en lecture
 	// Consulte le nom du lecteur
 	public String getNomLecteur () {
 		return nomLecteur;
 	}
-	// Consulte le prÈnom de l'auteur 
+	// Consulte le pr√©nom de l'auteur 
 	public String getPrenomLecteur () {
 		return prenomLecteur;
 	}
-	// Consulte le numero de l'auteur 
+	// Consulte le num√©ro de l'auteur 
 	public String getNumero () {
 		return numero;
 	}
@@ -85,7 +85,7 @@ public class Lecteur implements java.io.Serializable {
           return motDePasse;
 	}	
 
-	// MÈthode mÈtier , calcule le code d'enregistrement
+	// M√©thode m√©tier , calcule le code d'enregistrement
 	public String getDateAnniversaire() {
 		Calendar dans1An;
 		dans1An = calculDateAnniversaire();
@@ -93,7 +93,7 @@ public class Lecteur implements java.io.Serializable {
 		return dateAnniversaire; 
 	}
 
-	// MÈthode mÈtier, calcule la date d'anniversaire
+	// M√©thode m√©tier, calcule la date d'anniversaire
 	private Calendar calculDateAnniversaire () {
 		Calendar dans1an=Calendar.getInstance();
 		dans1an.add(dans1an.YEAR,1);

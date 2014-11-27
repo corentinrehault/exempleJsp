@@ -1,8 +1,8 @@
 /*
-#	Initiation à JSP
+#	Initiation Ã  JSP
 #	A. Tasso, S. Ermacore
-#	Exemples Chapitre 5 : Interroger une base de données
-#	Section : Enrichir une base de données avec JSP - Un composant JavaBean communique avec JSP
+#	Exemples Chapitre 5 : Interroger une base de donnÃ©es
+#	Section : Enrichir une base de donnï¿½es avec JSP - Un composant JavaBean communique avec JSP
 #	Fichier : DBConnexion.java
 #	Class : DBConnection
 #	Package : Exemple.ch5
@@ -14,7 +14,7 @@ import java.sql.*;
  
 public class DBConnexion implements java.io.Serializable {
 	
-	//Définition des propriétés
+	//DÃ©finition des propriÃ©tÃ©s
 	private String login;
 	private String password ;
 	private String hostname;
@@ -22,7 +22,7 @@ public class DBConnexion implements java.io.Serializable {
 	private String nomDeLaBase;
 	private Connection cnx;
 	
-	// Methodes d'acces en écriture
+	// MÃ©thodes d'acces en Ã©criture
 	// Enregistre le nom de login
 	public void setLogin (String valeur) {
 		login = valeur ;
@@ -35,16 +35,16 @@ public class DBConnexion implements java.io.Serializable {
 	public void setHostname (String valeur) {
 		hostname = valeur ;
 	}
-	// Enregistre le numéro de port		
+	// Enregistre le numÃ©ro de port		
 	public void setPort (String valeur) {
 		port = valeur ;
 	}
-	// Enregistre le nom de la base de données	
+	// Enregistre le nom de la base de donnÃ©es	
 	public void setNomDeLaBase (String valeur) {
 		nomDeLaBase = valeur ;
 	}	
 	
-	// Methodes d'acces en lecture
+	// MÃ©thodes d'accÃ¨s en lecture
 	public Connection getCnx() {
 		if (etablirConnexion()) {
 			return cnx;	
@@ -53,7 +53,7 @@ public class DBConnexion implements java.io.Serializable {
 		}
 	}	
 	
-	// Méthodes invisibles (métier)
+	// MÃ©thodes invisibles (mÃ©tier)
 	// Construit l'URL
 	private String construireUrlJdbc() {
 		String urlJdbc ;

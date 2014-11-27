@@ -1,11 +1,14 @@
 /*
-#	Initiation à JSP
+#	Initiation Ã  JSP
 #	A. Tasso, S. Ermacore
-#	Exemples Chapitre 7 : Les servlets ou les dessous cachés de JSP
-#	Section : Construire ses propres servlets - Une première servlet
+#	Exemples Chapitre 7 : Les servlets ou les dessous cachÃ©s de JSP
+#	Section : Construire ses propres servlets - Une premiÃ¨re servlet
 #	Fichier : Login.java
 #	Class : Login
 */
+
+package Exemples.Ch7 ;
+
 import java.io.*;
 import java.util.*;
 import javax.servlet.*;
@@ -13,7 +16,7 @@ import javax.servlet.http.*;
 
 public class Login extends HttpServlet {
 	
- // doGet() est appelée lorsque la requête est passée en mode GET	
+ // doGet() est appelÃ©e lorsque la requÃªte est passÃ©e en mode GET	
  public void doGet( HttpServletRequest req, HttpServletResponse rep)throws IOException, ServletException {
    rep.setContentType("text/html");
    PrintWriter pw = rep.getWriter();
@@ -40,7 +43,7 @@ public class Login extends HttpServlet {
    pw.println("</html>");
  }  
 
- // doPost() est appelée lorsque la requête est passée en mode POST  
+ // doPost() est appelÃ©e lorsque la requÃªte est passÃ©e en mode POST  
  public void doPost( HttpServletRequest req, HttpServletResponse rep)throws IOException, ServletException {
    rep.setContentType("text/html");
    PrintWriter pw = rep.getWriter();

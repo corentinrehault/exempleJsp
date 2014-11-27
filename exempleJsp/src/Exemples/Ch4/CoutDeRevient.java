@@ -1,8 +1,8 @@
 /*
-#	Initiation à JSP
+#	Initiation Ã  JSP
 #	A. Tasso, S. Ermacore
 #	Exemples Chapitre 4 : Utiliser un objet Java dans un script
-#	Section : Ecrire un JavaBean - Exemple : calculer le coût d'une voiture
+#	Section : Ecrire un JavaBean - Exemple : calculer le coÃ»t d'une voiture
 #	Fichier : CoutDeRevient.java
 #	Class : CoutDeRevient
 #	Package : Exemple.ch4
@@ -12,14 +12,14 @@ package Exemples.Ch4 ;
 import java.io.Serializable ;
 public class CoutDeRevient implements java.io.Serializable {
 
-	//Définition des propriétés
+	//DÃ©finition des propriÃ©tÃ©s
 	private float coutRoue;
 	private float coutCarrosserie ;
 	private float coutMoteur ;
 	private float coutVolant ;
 	private float coutRevient ;
 
-	// Définition des méthodes d'accès en écriture
+	// DÃ©finition des mÃ©thodes d'accÃ¨s en Ã©criture
 	// La roue
 	public void setCoutRoue (float valeur) {
 		coutRoue = valeur ;
@@ -36,15 +36,15 @@ public class CoutDeRevient implements java.io.Serializable {
 	public void setCoutVolant (float valeur) {
 		coutVolant =valeur;
 	}
-	// Définition des méthodes d'accès en lecture
-	// Le coût total de revient
+	// DÃ©finition des mÃ©thodes d'accÃ¨s en lecture
+	// Le coÃ»t total de revient
 	public float getCoutRevient() {
 		coutRevient= calculCoutRevient ();
 		return coutRevient;
 	}
 
-	// Définition des méthodes "métier" 
-	// Vérifier la validité des données	
+	// DÃ©finition des mÃ©thodes "mÃ©tier" 
+	// VÃ©rifier la validitÃ© des donnÃ©es	
 	private boolean verifCout () {
 		if (coutRoue<0 || coutMoteur<0 || coutCarrosserie < 0 || coutVolant < 0 ) {
 			return false ;
@@ -52,7 +52,7 @@ public class CoutDeRevient implements java.io.Serializable {
 			return true ;
 		} 
 	}
-	// Calculer le coût de revient 
+	// Calculer le coÃ»t de revient 
 	private float calculCoutRevient () {
 		if (verifCout()) {
 			return coutRoue*4+coutMoteur+coutCarrosserie+coutVolant;

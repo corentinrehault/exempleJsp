@@ -1,12 +1,15 @@
 /*
-#	Initiation à JSP
+#	Initiation Ã  JSP
 #	A. Tasso, S. Ermacore
-#	Exemples Chapitre 7 : Les servlets ou les dessous cachés de JSP
+#	Exemples Chapitre 7 : Les servlets ou les dessous cachÃ©s de JSP
 #	Section : Construire ses propres servlets 
-#                 - Une servlet pour authentifier un lecteur auprès d'une base de données
+#                 - Une servlet pour authentifier un lecteur auprÃ¨s d'une base de donnÃ©es
 #	Fichier : InitEtDestroy.java
 #	Class : InitEtDestroy
 */
+
+package Exemples.Ch7 ;
+
 import java.io.*;
 import java.sql.*;
 import javax.servlet.*;
@@ -16,57 +19,57 @@ public class InitEtDestroy extends HttpServlet  {
   private Statement lien; 
   private Connection cnx; 
 
-// init() est appelée avant le traitement des requêtes 
+// init() est appelÃ©e avant le traitement des requÃªtes 
 public void init(ServletConfig config) throws ServletException  {
   super.init(config);
   String fichier  = config.getInitParameter("nomFichier"); 
 
   try    {
-    // Recherche le parametre nomFichier défini dans /WEB-INF/web.xml
+    // Recherche le parametre nomFichier dÃ©fini dans /WEB-INF/web.xml
     String mot="";
     int i = 1;
-    // Si le fichier contenant les parametres a été trouvé  
+    // Si le fichier contenant les parametres a Ã©tÃ© trouvÃ©  
     if (fichier != null) {  
-      // Création d'un objet DBConnexion
+      // CrÃ©ation d'un objet DBConnexion
       DBConnexion dbcnx = new DBConnexion();  
       // Lire  le fichier d'initialisation  ligne par ligne  
       BufferedReader br = new BufferedReader(new FileReader(fichier));         
       while ((mot = br.readLine()) != null) {   
       //  System.out.println("mot :"+  mot +"<BR>");    
         switch(i) {
-          // La première ligne définie le nom d'utilisateur de la base de données
+          // La premiÃ¨re ligne dÃ©finie le nom d'utilisateur de la base de donnÃ©es
           case 1 : // mot = "jspuser"
             dbcnx.setLogin(mot);
             break;
-          // La deuxième ligne définie le mot de passe de l'utilisateur 
+          // La deuxiÃ¨me ligne dÃ©finie le mot de passe de l'utilisateur 
           case 2 : // mot = "jspuser"
             dbcnx.setPassword(mot);
             break;
-          // La troisième ligne définie le nom de la machine
+          // La troisiÃ¨me ligne dÃ©finie le nom de la machine
           case 3 : // mot = "localhost"
             dbcnx.setHostname(mot);
             break;
-          // La quatrieme ligne définie le numéro du port
+          // La quatriÃ¨me ligne dÃ©finie le numÃ©ro du port
           case 4 : // mot = "3306"   
             dbcnx.setPort(mot);
             break;
-          // La cinquième ligne définie le nom de la base de données
+          // La cinquiÃ¨me ligne dÃ©finie le nom de la base de donnÃ©es
           case 5 : // mot = "livrejsp"   
             dbcnx.setNomDeLaBase(mot);
             break;    	      
         } 
         i++;   
       }     
-      // Création d'un objet DBLien
+      // CrÃ©ation d'un objet DBLien
       DBLien dblien = new DBLien();
-      // Ouvrir une connection sur la base de données
+      // Ouvrir une connection sur la base de donnÃ©es
       cnx = dbcnx.getCnx();
       if (cnx == null) {
-        System.out.println("Erreur de connexion avec la base de données");
+        System.out.println("Erreur de connexion avec la base de donnï¿½es");
       }
       lien = dblien.getLien(cnx);
       if (lien == null) {
-        System.out.println("Erreur de liaison avec la base de données");
+        System.out.println("Erreur de liaison avec la base de donnï¿½es");
       }
     } else {          
        System.out.println("Le fichier d'initialisation n'existe pas"); 
@@ -79,7 +82,7 @@ public void init(ServletConfig config) throws ServletException  {
   
 }
 
-// doGet() est appelée lorsque la requête est passée en mode GET
+// doGet() est appelÃ©e lorsque la requÃªte est passÃ©e en mode GET
 public void doGet( HttpServletRequest req, HttpServletResponse rep)throws IOException, ServletException {
 
    rep.setContentType("text/html");
@@ -106,7 +109,7 @@ public void doGet( HttpServletRequest req, HttpServletResponse rep)throws IOExce
    pw.println("</html>");
  }  
  
-// doPost() est appelée lorsque la requête est passée en mode POST
+// doPost() est appelÃ©e lorsque la requÃªte est passÃ©e en mode POST
 public void doPost(HttpServletRequest req, HttpServletResponse rep) throws ServletException, IOException  {
   PrintWriter pw = rep.getWriter();
   rep.setContentType("text/html");
@@ -123,7 +126,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse rep) throws Servl
   ResultSet rs;
   try     {
     rs = lien.executeQuery(nomBD);
-    // Si le lecteur existe dans la base de donnée
+    // Si le lecteur existe dans la base de donnÃ©e
     if (rs.first()) {
      // enregistrer toutes les informations dans l'objet session 
        session.setAttribute("numeroLecteur", rs.getString("LEC_NumLecteur"));
@@ -142,28 +145,28 @@ public void doPost(HttpServletRequest req, HttpServletResponse rep) throws Servl
   } catch ( Exception e ) {
      pw.println ("<br><font face=arial color=black><b>Erreur : <br></b></font>" + e.getMessage());  
   }
-  // Vérifier si le nom du lecteur est enregistré dans la session
+  // VÃ©rifier si le nom du lecteur est enregistrÃ© dans la session
   nomLecteur=(String)session.getAttribute("nomLecteur");
-  // Si le lecteur est enregistré dans la session
+  // Si le lecteur est enregistrÃ© dans la session
   if (nomLecteur!=null) {
-    // Afficher le nom et prénom du lecteur 
+    // Afficher le nom et prÃ©nom du lecteur 
     String prenomLecteur = (String) session.getAttribute("prenomLecteur");
     pw.println ("<h1><font face=arial >Bonjour "+prenomLecteur + " " +nomLecteur+ "<br></h1>"); 
-    // Afficher le lien " Modifier vos preferences … " 
+    // Afficher le lien " Modifier vos preferences > " 
     pw.println ("<br>");
-    pw.println ("<font face=arial size=2>Vous pouvez modifier vos préférences ");
+    pw.println ("<font face=arial size=2>Vous pouvez modifier vos prÃ©fÃ©rences ");
     pw.println ("<a href=http://localhost:8080/exemplesJSP/chap6/saisiePreferencesLecteur.jsp>ici</a>");
 
     pw.println ("<br><br>");
-   // Si le lecteur n'est pas enregistré dans la session
+   // Si le lecteur n'est pas enregistrÃ© dans la session
   } else {
-    pw.println("Vous n'êtes pas enregistré sur la bibliothèque en ligne"); 
+    pw.println("Vous n'Ãªtes pas enregistrÃ© sur la bibliothÃ¨que en ligne"); 
   }
   pw.println("</body>");
   pw.println("</html>");
   pw.close();
  }
-// destroy() est appelée lorsque le serveur est arrêté proprement (shutdown)
+// destroy() est appelÃ©e lorsque le serveur est arrÃªtÃ© proprement (shutdown)
 public void destroy() {
   try {
    cnx.close();
