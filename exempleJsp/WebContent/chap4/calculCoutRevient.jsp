@@ -17,9 +17,9 @@
 
 <html>
 <body>
-<h1><font face=arial>Coût de revient de la voiture</h1>
+<h1><font face=arial>Coût de revient de la voiture</font></h1>
 <font face=arial size=2>Par défaut la voiture coûte : 
-<jsp:getProperty name= "cdr" property="coutRevient" /> euros <br>
+<jsp:getProperty name= "cdr" property="coutRevient" /> euros </font><br>
 <hr>
 <!--// On récupère les paramètres passés en POST par le formulaire -->
 <jsp:setProperty name= "cdr" property="coutRoue"/>
@@ -27,32 +27,32 @@
 <jsp:setProperty name= "cdr" property="coutMoteur"/>
 <jsp:setProperty name= "cdr" property="coutVolant"/>
 
-<h3><font face=arial>Formulaire de saisie des différents coûts des composants de la voiture</h3>
+<h3><font face=arial>Formulaire de saisie des différents coûts des composants de la voiture</font></h3>
 
 <form name="coutderevient" action="calculCoutRevient.jsp" method="POST">
 <table>
 <tr>
-	<td><font face=arial size=2>Coût de la roue :</td>
-	<td><input type=texte size=10 name=coutRoue value=""></td>
-	<td><font face=arial size=2>euros</td>
+	<td><font face=arial size=2>Coût de la roue :</font></td>
+	<td><input type="text" size=10 name=coutRoue value=""></td>
+	<td><font face=arial size=2>euros</font></td>
 </tr><tr>
-	<td><font face=arial size=2>Coût de la carrosserie :</td>
-	<td><input type=texte size=10 name=coutCarrosserie value=""></td>
-	<td><font face=arial size=2>euros</td>
+	<td><font face=arial size=2>Coût de la carrosserie :</font></td>
+	<td><input type="text" size=10 name=coutCarrosserie value=""></td>
+	<td><font face=arial size=2>euros</font></td>
 </tr><tr>
-	<td><font face=arial size=2>Coût du moteur :</td>
-	<td><input type=texte size=10 name=coutMoteur value=""></td>
-	<td><font face=arial size=2>euros</td>
+	<td><font face=arial size=2>Coût du moteur :</font></td>
+	<td><input type="text" size=10 name=coutMoteur value=""></td>
+	<td><font face=arial size=2>euros</font></td>
 </tr><tr>
-	<td><font face=arial size=2>Coût du volant :</td>
-	<td><input type=texte size=10 name=coutVolant value=""></td>
-	<td><font face=arial size=2>euros</td>
+	<td><font face=arial size=2>Coût du volant :</font></td>
+	<td><input type="text" size=10 name=coutVolant value=""></td>
+	<td><font face=arial size=2>euros</font></td>
 </tr>
 </table>
 <input type=submit value="Calculer">
 </form>
 
-Après modification <br>
-Coût de revient de la voiture : <jsp:getProperty name= "cdr" property="coutRevient" /> euros <br>
+<font face=arial size=2>Après modification <br>
+Coût de revient de la voiture : <jsp:getProperty name= "cdr" property="coutRevient" /> euros </font><br>
 </body>
 </html>

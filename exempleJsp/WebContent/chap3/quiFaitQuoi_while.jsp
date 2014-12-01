@@ -19,7 +19,7 @@ String lFilm [] = { "Le grand bleu", "Le fabuleux destin d'Amélie Poulain", "La 
       out.println(" <BODY bgcolor=white> <BR>");
 %>
 <!-- Debut du formulaire html-->
-<FORM ACTION="quiFaitQuoi_while.jsp" METHOD "POST"> <ul><ul>
+<FORM ACTION="quiFaitQuoi_while.jsp" method="post"> <ul><ul>
 <p><h1>Quel film a réalisé Jean Jacques Beineix ?</h1><br></p>
 <% 
        String chaineF ="<select name=film>\n";

@@ -14,7 +14,12 @@ package Exemples.Ch5 ;
 import java.io.Serializable ;
 import java.sql.*;
 
-public class DBLien implements java.io.Serializable {
+public class DBLien implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2126944443950569393L;
 	
 	//Définition des propriétés
 	private Statement lien = null;

@@ -46,7 +46,7 @@ public class CoutDeRevient implements java.io.Serializable {
 	// Définition des méthodes "métier" 
 	// Vérifier la validité des données	
 	private boolean verifCout () {
-		if (coutRoue<0 || coutMoteur<0 || coutCarrosserie < 0 || coutVolant < 0 ) {
+		if (coutRoue<0f || coutMoteur<0f || coutCarrosserie < 0f || coutVolant < 0f ) {
 			return false ;
 		} else {
 			return true ;

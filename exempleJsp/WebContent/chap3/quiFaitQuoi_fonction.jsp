@@ -33,7 +33,7 @@ public String fSelect(String [] liste, String nom) {
        out.println(" <BODY bgcolor=white> <BR>");
 %>
 <!-- Debut du formulaire html-->
-<FORM ACTION="quiFaitQuoi_fonction.jsp" METHOD "POST">
+<FORM ACTION="quiFaitQuoi_fonction.jsp" method="post">
 <% 
     // Appel de la fonction fSelect()
     String chaineR = fSelect(lRealisateur, "auteur");

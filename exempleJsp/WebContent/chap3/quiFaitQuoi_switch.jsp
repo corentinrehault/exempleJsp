@@ -17,7 +17,7 @@
 %>
 
 <!-- Début du formulaire html-->
-<FORM ACTION="quiFaitQuoi_switch.jsp" METHOD "POST">
+<FORM ACTION="quiFaitQuoi_switch.jsp" METHOD="POST">
 <ul><ul> <p><h1>Quel est le réalisateur du film <i> La guerre du feu </i> ?</h1><br></p>
 <input type="Radio" name="valeur" value="0">  Jean-Jacques Beinex <br><br>
 <input type="Radio" name="valeur" value="1">  Luc Besson <br><br>

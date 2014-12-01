@@ -5,7 +5,7 @@
 #	Section : Transmettre des données d'un script à un autre
 -->
 
-<!- receptionPasswd.jsp -->
+<!-- receptionPasswd.jsp -->
 <%  
   String motDePasse= request.getParameter("secret");
   out.println("Votre mot de passe : " + motDePasse);

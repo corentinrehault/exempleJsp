@@ -19,7 +19,7 @@
       out.println(" <BODY bgcolor=white> <BR>");
 %>
 <!-- Debut du formulaire html-->
-<FORM ACTION="quiFaitQuoi_do_while.jsp" METHOD "POST"> <ul><ul>
+<FORM ACTION="quiFaitQuoi_do_while.jsp" METHOD="POST"> <ul><ul>
 <p><h1>Quel est le réalisateur du film <i> La guerre du feu </i>?</h1><br></p>
 <% 
    String chaineR ="<select name=auteur>\n";

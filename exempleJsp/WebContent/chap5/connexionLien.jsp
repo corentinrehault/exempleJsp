@@ -19,8 +19,8 @@
 <!--// DBConnexion Bean-->
 <jsp:useBean id="dbcnx" class="Exemples.Ch5.DBConnexion">
 <!--// Code d'initialisation //-->
-<jsp:setProperty name= "dbcnx" property="login" value="jspuser"/>
-<jsp:setProperty name= "dbcnx" property="password" value="jspuser"/>
+<jsp:setProperty name= "dbcnx" property="login" value="userjsp"/>
+<jsp:setProperty name= "dbcnx" property="password" value="userjsp"/>
 <jsp:setProperty name= "dbcnx" property="hostname" value="localhost"/>
 <jsp:setProperty name= "dbcnx" property="port" value="3306"/>
 <jsp:setProperty name= "dbcnx" property="nomDeLaBase" value="livrejsp"/>

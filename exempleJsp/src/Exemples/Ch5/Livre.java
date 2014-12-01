@@ -13,6 +13,10 @@ package Exemples.Ch5 ;
 import java.io.Serializable ;
 public class Livre implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7107041846557848197L;
 	//Définition des propriétés
 	private String titre;
 	private String categorie ;

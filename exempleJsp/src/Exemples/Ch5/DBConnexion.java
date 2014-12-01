@@ -6,14 +6,20 @@
 #	Fichier : DBConnexion.java
 #	Class : DBConnection
 #	Package : Exemple.ch5
-*/
+ */
 
 package Exemples.Ch5 ;
+
 import java.io.Serializable ;
 import java.sql.*;
- 
-public class DBConnexion implements java.io.Serializable {
-	
+
+public class DBConnexion implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1295973738815353764L;
+
 	//Définition des propriétés
 	private String login;
 	private String password ;
@@ -21,7 +27,7 @@ public class DBConnexion implements java.io.Serializable {
 	private String port;
 	private String nomDeLaBase;
 	private Connection cnx;
-	
+
 	// Méthodes d'acces en écriture
 	// Enregistre le nom de login
 	public void setLogin (String valeur) {
@@ -43,7 +49,7 @@ public class DBConnexion implements java.io.Serializable {
 	public void setNomDeLaBase (String valeur) {
 		nomDeLaBase = valeur ;
 	}	
-	
+
 	// Méthodes d'accès en lecture
 	public Connection getCnx() {
 		if (etablirConnexion()) {
@@ -52,7 +58,7 @@ public class DBConnexion implements java.io.Serializable {
 			return null;
 		}
 	}	
-	
+
 	// Méthodes invisibles (métier)
 	// Construit l'URL
 	private String construireUrlJdbc() {
@@ -76,5 +82,5 @@ public class DBConnexion implements java.io.Serializable {
 		}
 		return statusConnexion;
 	}
-	
+
 }

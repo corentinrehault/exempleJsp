@@ -1,29 +1,29 @@
 <!-- 
-#	Initiation à JSP
+#	Initiation ï¿½ JSP
 #	A. Tasso, S. Ermacore
 #	Exemples Chapitre 2 : Communiquer avec l'internaute 
-#	Section : Les différents outils HTML pour construire des formulaires
+#	Section : Les diffï¿½rents outils HTML pour construire des formulaires
 -->
 <HTML>
 <HEAD>
-
+<meta charset="UTF-8" />
+</HEAD>
 <!-- Debut du formulaire html-->
 
-<FORM ACTION="http://localhost:8080/exercicesJSP/chap2/expression.jsp"
-      METHOD "POST">
+<FORM ACTION="http://localhost:8080/exempleJsp/chap2/expression.jsp" METHOD="post">
   <input type=text name="text" value="Entrez votre nom ici "><br><br>
   
   Un bouton radio : <input type="Radio" name="radio" value="1">  <br>
-  Un bouton radio coché : <input type="Radio" name="radio" value="1" checked>  <br><br>
-  Une case à cocher :<input type=checkbox name="CasaCocher value="2"> <br><br>
-   <input type=hidden name="caché" value="3">  Un champ caché  <br><br>
+  Un bouton radio cochÃ© : <input type="Radio" name="radio" value="2" checked>  <br><br>
+  Une case Ã  cocher :<input type=checkbox name="CasaCocher" value="3"> <br><br>
+   <input type=hidden name="cachÃ©" value="3">  Un champ cachÃ©  <br><br>
   Initialiser le formulaire : <input type=reset value="Initialiser"> <br><br>
   Saisir un mot de passe : <input type=password name="motPasse" maxlength="8"> <br><br>
   Saisir un nom de fichier : <input type=file name="fichier"><br><br>
 
 <select name="listechoix" size="3"> 
 <option>Lundi</option> 
-<option selected>Mardi  </option> 
+<option selected="selected">Mardi  </option> 
 <option>Mercredi</option> 
 <option>Jeudi</option> 
 <option >Vendredi</option> 
