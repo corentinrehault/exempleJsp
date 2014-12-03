@@ -17,8 +17,8 @@
 <%@ page import="java.sql.Statement" %>
 
 <jsp:useBean id="dbcnx" class="Exemples.Ch5.DBConnexion">
-<jsp:setProperty name= "dbcnx" property="login" value="jspuser"/>
-<jsp:setProperty name= "dbcnx" property="password" value="jspuser"/>
+<jsp:setProperty name= "dbcnx" property="login" value="userjsp"/>
+<jsp:setProperty name= "dbcnx" property="password" value="userjsp"/>
 <jsp:setProperty name= "dbcnx" property="hostname" value="localhost"/>
 <jsp:setProperty name= "dbcnx" property="port" value="3306"/>
 <jsp:setProperty name= "dbcnx" property="nomDeLaBase" value="livrejsp"/>
@@ -101,7 +101,7 @@
 <!-Enregistrer les données dans la base de données -->
 <%
   // Préparation de la requete
-  String commande = "insert into livres values('"+livre.getCode()+"','"+livre.getNomAuteur()+"','"+livre.getPrenomAuteur()+"','"+livre.getTitre()+"','"+livre.getCategorie()+"','"+livre.getIsbn()+"')";
+  String commande = "insert into livres (LIV_CodeLivre,LIV_NomAuteur,LIV_PrenomAuteur,LIV_Titre,LIV_Categorie,LIV_ISBN) values('"+livre.getCode()+"','"+livre.getNomAuteur()+"','"+livre.getPrenomAuteur()+"','"+livre.getTitre()+"','"+livre.getCategorie()+"','"+livre.getIsbn()+"')";
   lien.executeUpdate(commande);
 %>
 </body>

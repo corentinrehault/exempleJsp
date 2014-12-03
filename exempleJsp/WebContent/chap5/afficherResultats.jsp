@@ -16,8 +16,8 @@
 
 
 <jsp:useBean id="dbcnx" class="Exemples.Ch5.DBConnexion">
-<jsp:setProperty name="dbcnx" property="login" value="jspuser"/>
-<jsp:setProperty name="dbcnx" property="password" value="jspuser"/>
+<jsp:setProperty name="dbcnx" property="login" value="userjsp"/>
+<jsp:setProperty name="dbcnx" property="password" value="userjsp"/>
 <jsp:setProperty name="dbcnx" property="hostname" value="localhost"/>
 <jsp:setProperty name="dbcnx" property="port" value="3306"/>
 <jsp:setProperty name="dbcnx" property="nomDeLaBase" value="livrejsp"/>
@@ -29,7 +29,6 @@
 <body>
 <table width=700><tr><td>
 <h1><font face=arial>Sélection sur la table Livres</h1>
-<!--
 <h3><font face=arial>La connexion avec la base de données</h3>
 
 <font face=arial size=2 color=black>1ère étape : Création d'une connexion vers la base de données :<br>

@@ -13,8 +13,14 @@ package Exemples.Ch6 ;
 import java.io.Serializable ;
 import java.util.Calendar ;
 import java.text.DateFormat ;
-public class Lecteur implements java.io.Serializable {
 
+public class Lecteur implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4787400245005845559L;
+	
 	//Définition des propriétés
 	private String nomLecteur ;
 	private String prenomLecteur ;

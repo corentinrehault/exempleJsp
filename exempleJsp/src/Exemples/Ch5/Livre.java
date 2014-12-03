@@ -11,7 +11,7 @@
 package Exemples.Ch5 ;
 
 import java.io.Serializable ;
-public class Livre implements java.io.Serializable {
+public class Livre implements Serializable {
 
 	/**
 	 * 
