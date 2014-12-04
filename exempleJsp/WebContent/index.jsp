@@ -231,11 +231,11 @@ avec affectation des propriétés et appel de la méthode métier</td>
   <td align=left valign=top><font face=arial size=2 color=black>Montre la différence entre les variables locales et les variables d'instance</td>
 </tr>
 <tr>
-  <td align=left valign=top><font face=arial size=2 color=#DE8600><a href="./servlet/Login">Login</a></td>
+  <td align=left valign=top><font face=arial size=2 color=#DE8600><a href="./login">Login</a></td>
   <td align=left valign=top><font face=arial size=2 color=black>Une servlet pour identifier l'utilisateur</td>
 </tr>
 <tr>
-  <td align=left valign=top><font face=arial size=2 color=#DE8600><a href="./servlet/ServletParametree">ServletParametree</a></td>
+  <td align=left valign=top><font face=arial size=2 color=#DE8600><a href="./parametree">ServletParametree</a></td>
   <td align=left valign=top><font face=arial size=2 color=black>Une servlet qui prend en paramètre les données de connexion à la base de données livrejsp</td>
 </tr>
 </table>

@@ -11,12 +11,21 @@ package Exemples.Ch7 ;
 
 import java.io.*;
 import java.util.*;
+
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
+
+@WebServlet(name="Login", urlPatterns={"/login"})
 
 public class Login extends HttpServlet {
 	
- // doGet() est appelée lorsque la requête est passée en mode GET	
+ /**
+	 * 
+	 */
+	private static final long serialVersionUID = -5300645023099227039L;
+
+// doGet() est appelée lorsque la requête est passée en mode GET	
  public void doGet( HttpServletRequest req, HttpServletResponse rep)throws IOException, ServletException {
    rep.setContentType("text/html");
    PrintWriter pw = rep.getWriter();
@@ -26,7 +35,7 @@ public class Login extends HttpServlet {
    pw.println("</head>");
    pw.println("<body bgcolor='white'>");
    pw.println("<h2><font face=arial>Formulaire d'identification</h2>");
-   pw.println("<form name=ident action=http://localhost:8080/exemplesJSP/servlet/Login method=POST>");
+   pw.println("<form name=ident action=http://localhost:8080/exempleJsp/login method=POST>");
    pw.println("<table>");
    pw.println("<tr>");
    pw.println("<td><font face=arial size=2>Nom : </td>");

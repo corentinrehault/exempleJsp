@@ -16,7 +16,12 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 public class InitEtDestroy extends HttpServlet  {
-  private Statement lien; 
+  /**
+	 * 
+	 */
+	private static final long serialVersionUID = -2073833206269109720L;
+	
+private Statement lien; 
   private Connection cnx; 
 
 // init() est appelée avant le traitement des requêtes 
@@ -59,17 +64,18 @@ public void init(ServletConfig config) throws ServletException  {
             break;    	      
         } 
         i++;   
-      }     
+      }
+      br.close();
       // Création d'un objet DBLien
       DBLien dblien = new DBLien();
       // Ouvrir une connection sur la base de données
       cnx = dbcnx.getCnx();
       if (cnx == null) {
-        System.out.println("Erreur de connexion avec la base de donn�es");
+        System.out.println("Erreur de connexion avec la base de données");
       }
       lien = dblien.getLien(cnx);
       if (lien == null) {
-        System.out.println("Erreur de liaison avec la base de donn�es");
+        System.out.println("Erreur de liaison avec la base de données");
       }
     } else {          
        System.out.println("Le fichier d'initialisation n'existe pas"); 
@@ -93,7 +99,7 @@ public void doGet( HttpServletRequest req, HttpServletResponse rep)throws IOExce
    pw.println("</head>");
    pw.println("<body bgcolor='white'>");
    pw.println("<h2><font face=arial>Formulaire d'identification</h2>");
-   pw.println("<form name=ident action=http://localhost:8080/exemplesJSP/servlet/ServletParametree method=POST>");
+   pw.println("<form name=ident action=http://localhost:8080/exempleJsp/parametree method=POST>");
    pw.println("<table>");
    pw.println("<tr>");
    pw.println("<td><font face=arial size=2>Nom : </td>");
@@ -155,7 +161,7 @@ public void doPost(HttpServletRequest req, HttpServletResponse rep) throws Servl
     // Afficher le lien " Modifier vos preferences > " 
     pw.println ("<br>");
     pw.println ("<font face=arial size=2>Vous pouvez modifier vos préférences ");
-    pw.println ("<a href=http://localhost:8080/exemplesJSP/chap6/saisiePreferencesLecteur.jsp>ici</a>");
+    pw.println ("<a href=http://localhost:8080/exempleJsp/chap6/saisiePreferencesLecteur.jsp>ici</a>");
 
     pw.println ("<br><br>");
    // Si le lecteur n'est pas enregistré dans la session

@@ -1,5 +1,5 @@
-jspuser
-jspuser
+userjsp
+userjsp
 localhost
 3306
 livrejsp

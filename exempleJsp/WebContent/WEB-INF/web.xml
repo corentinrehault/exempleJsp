@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE web-app 
     PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN" 
@@ -9,7 +9,7 @@
 
     <display-name>Exemples JSP</display-name>
     <description>
-          Tous les exemples du livre Initiation à JSP
+          Tous les exemples du livre Initiation Ã  JSP
     </description>
     
     <context-param>
@@ -23,10 +23,10 @@
     
   <servlet>
     <servlet-name>ServletParametree</servlet-name> 
-    <servlet-class>InitEtDestroy</servlet-class> 
+    <servlet-class>Exemples.Ch7.InitEtDestroy</servlet-class> 
     <init-param>
         <param-name>nomFichier</param-name>
-        <!-- l'élément XML <param-value> doit contenir le chemin absolue vers le fichier paramBD.txt --> 
+        <!-- l'Ã©lÃ©ment XML <param-value> doit contenir le chemin absolue vers le fichier paramBD.txt --> 
         <!-- Exemple sous windows : <param-value>c:\Le\chemin\vers\lawebapp\exemplesJSP\WEB-INF\paramBD.txt</param-value> --> 
         <!-- Exemple sous linux : <param-value>/le/chemin/vers/lawebapp/exemplesJSP/WEB-INF/paramBD.txt</param-value> -->        
         <param-value>paramBD.txt</param-value> 
@@ -35,19 +35,19 @@
    
   <servlet>
     <servlet-name>Login</servlet-name> 
-    <servlet-class>Login</servlet-class> 
+    <servlet-class>Exemples.Ch7.Login</servlet-class> 
   </servlet>
 
 
  
   <servlet-mapping>
     <servlet-name>ServletParametree</servlet-name>
-    <url-pattern>/servlet/ServletParametree</url-pattern>
+    <url-pattern>/parametree</url-pattern>
   </servlet-mapping>   
   
   <servlet-mapping>
     <servlet-name>Login</servlet-name>
-    <url-pattern>/servlet/Login</url-pattern>
+    <url-pattern>/login</url-pattern>
   </servlet-mapping>  
      
      
