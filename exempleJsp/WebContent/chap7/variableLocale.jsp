@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<%-- debut de la scriptlet --%>
+<%-- debut de la scriptlet ici--%>
 <%      
  int varLocal;
  out.println("Variable locale : " + varLocal); 
